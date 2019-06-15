@@ -10,6 +10,6 @@ lose. There are three difficulty levels, each increases the speed and frequency 
 
 To play this game HaxeFlixel must be installed.
 
-An in depth process of installation can be found [here](https://haxeflixel.com/documentation/getting-started/)
+An in depth process of HaxeFlixel's installation can be found [here](https://haxeflixel.com/documentation/getting-started/)
 
 This game was created and tested on a Lenovo T420 Thinkpad with Intel hardware running Slackware 14.2.
