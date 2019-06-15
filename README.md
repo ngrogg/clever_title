@@ -1,6 +1,6 @@
 # Clever Title
 
-A simple game written in HaxeFlixel for the Hawaii Mountain View Public/School Libraries 2019 Summer Reading Program.
+A simple game written in HaxeFlixel for the Hawaii Mountain View Public/School Library's 2019 Summer Reading Program.
 The art in the game was created by children as part of a presentation on the art and science of video games, and 
 included a presentation covering the general process of creating a video game. 
 
