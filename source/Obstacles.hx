@@ -18,6 +18,7 @@ class Obstacles extends FlxSprite
 		super();
 	}
 
+    // Function uses RNG to determine which sprite gets chosen
 	public function init(X:Int = 0, Y:Int = 0, VelocityX:Float = 0, VelocityY:Float = 0):Obstacles
 	{
 		var spriteNum = FlxG.random.int(1,4);
@@ -38,7 +39,7 @@ class Obstacles extends FlxSprite
 			loadGraphic("assets/obstacle4.png");
 		}
 
-		// Position stuff, narrower margin for harder difficulty
+		// Position for obstacle spawn, narrower margin for harder difficulty, also RNG
 		if(MenuState.Difficulty == 3)
 		{
 			x = FlxG.width / 4 + FlxG.random.int(0,400);
@@ -49,9 +50,9 @@ class Obstacles extends FlxSprite
 			x = FlxG.width / 2 + FlxG.random.int(0,100);
 			y = FlxG.height / 2 + FlxG.random.int(-200,200);
 		}
-		
-		// Velocity stuff
 
+        // Affect obstacle speed and direction based on difficulty
+        
 		// If easy mode
 		if(MenuState.Difficulty == 1)
 		{ 
@@ -65,7 +66,7 @@ class Obstacles extends FlxSprite
 			velocity.y = 0;
 		}
 
-		// if hard mode, also activate collision!
+		// if hard mode
 		if(MenuState.Difficulty == 3)
 		{ 
 			velocity.x = FlxG.random.int(-400,-650);
