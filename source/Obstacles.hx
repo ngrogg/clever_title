@@ -69,7 +69,7 @@ class Obstacles extends FlxSprite
 		// if hard mode
 		if(MenuState.Difficulty == 3)
 		{ 
-			velocity.x = FlxG.random.int(-400,-650);
+			velocity.x = FlxG.random.int(-200,-100);
 			velocity.y = FlxG.random.int(-100, 100);
 		}
 
