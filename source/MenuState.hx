@@ -10,7 +10,7 @@ import flixel.input.gamepad.FlxGamepad;
 class MenuState extends FlxState
 {
 	
-// Difficulty Variable
+// Difficulty Variable, affects obstacle speed, spawn rate and positions
 public static var Difficulty:Int;
 
 
@@ -23,12 +23,10 @@ public static var Difficulty:Int;
 	t.setFormat(null, 32, FlxColor.WHITE, CENTER, OUTLINE );
 	add(t);
 	
-	// Text to display points
 	t = new FlxText(0, 40, FlxG.width, "Use Up, Down, Left, Right to avoid obstacles");
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
 
-	// Text to display points
 	t = new FlxText(0, 60, FlxG.width, "W, A, S, D are also usable");
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
@@ -37,24 +35,19 @@ public static var Difficulty:Int;
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
 
-
 	t = new FlxText(0, 100, FlxG.width, "Reach the checkered flag to win");
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
 	
-	// Helper text
 	t = new FlxText(0, 440, FlxG.width, "Difficulty:");
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
 	
-	// Helper text
 	t = new FlxText(0, 460, FlxG.width, "E, M, or H for easy, medium or hard game");
 	t.setFormat(null, 16, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);		
-
-	
-	// 
 	}
+	
 	override public function update(elapsed:Float):Void 
 	{	
 
