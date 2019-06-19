@@ -9,8 +9,6 @@ import flixel.tweens.FlxTween;
 
 class WinState extends FlxState
 {
-	
-// Variables
 
 	override public function create():Void
 	{
@@ -21,7 +19,7 @@ class WinState extends FlxState
 	t.setFormat(null, 32, FlxColor.WHITE, CENTER, OUTLINE );
 	add(t);
 	
-	// Text to display points
+    // Helper text, text variable t can be re-used.
 	t = new FlxText(0, 40, FlxG.width, "YOU WIN!!!");
 	t.setFormat(null, 24, FlxColor.WHITE, CENTER, OUTLINE);
 	add(t);
