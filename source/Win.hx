@@ -11,12 +11,15 @@ import flixel.system.FlxSound;
 class Win extends FlxSprite
 {
 
+    // This function creates the finish line
 	public function new() 
 	{
 		super(FlxG.width/2 + 300, 1); //FlxG.height
 		loadGraphic("assets/win.png");
 		updateHitbox();
 	}
+	
+	// This function makes the finish line move from left to right 
 	override public function update(elapsed:Float):Void
 	{
 		// Start moving to the left 
