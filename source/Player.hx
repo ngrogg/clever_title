@@ -11,6 +11,7 @@ import flixel.input.gamepad.FlxGamepad;
 
 class Player extends FlxSprite
 {
+    // Create player object with sprite as defined
 	public function new()
 	{
 		super(FlxG.width/2 - 300, FlxG.height/2);
@@ -25,33 +26,34 @@ class Player extends FlxSprite
 		velocity.x = 0;
 		velocity.y = 0;
 
-		// Movement keys
+		// Movement keys, allows for WASD or Up Down Left Right
 		if (FlxG.keys.anyPressed([UP, W]))
 		{
-			velocity.y -= 250;	
+			velocity.y -= 200;	
 		}
 
 		if (FlxG.keys.anyPressed([DOWN, S]))
 		{
-			velocity.y += 250;	
+			velocity.y += 200;	
 
 		}
 
 		if (FlxG.keys.anyPressed([LEFT, A]))
 		{
-			velocity.x -= 250;	
+			velocity.x -= 200;	
 
 		}
 
 		if (FlxG.keys.anyPressed([RIGHT, D]))
 		{
-			velocity.x += 250;	
+			velocity.x += 200;	
 
 		}
+		// Making the velocity too high makes the controls twitchy
 
 		super.update(elapsed);
 
-		// Boundaries
+		// Boundaries, so player doesn't leave the screen
 		if (x > FlxG.width - width - 20)
 		{
 			x = FlxG.width - width - 20;
