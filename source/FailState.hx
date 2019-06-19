@@ -45,7 +45,7 @@ class FailState extends FlxState
 
 	override public function update(elapsed:Float):Void 
 	{	
-		// Start next level
+		// Switch to Main Menu when E is pressed
 		if (FlxG.keys.pressed.E)
 		{
 			FlxG.switchState(new MenuState());
