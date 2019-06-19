@@ -30,6 +30,7 @@ class PlayState extends FlxState
 
 	override public function create():Void
 	{
+	    // Prevents cursor from being visible while playing
 		FlxG.mouse.visible = false;
 		
 		// Create background
@@ -42,7 +43,8 @@ class PlayState extends FlxState
 		// Spawn obstacles
 		obstacles = new FlxTypedGroup<Obstacles>();
 		add(obstacles);
-
+		
+		// Create finish line
 		victory = new Win();
 		
 		// Set Count initial value
@@ -75,6 +77,7 @@ class PlayState extends FlxState
 		FlxG.overlap(victory,_player,winHitsPlayer);
 	}
 
+    // Function to affect enemy spawn rate
 	function resetTimer(Timer:FlxTimer):Void
 	{	// If easy mode 2
 		if(MenuState.Difficulty == 1)
@@ -100,6 +103,7 @@ class PlayState extends FlxState
 		// Work around for initial spawn issue
 		count = count + 1;
 
+        // After timer elapses spawn the finish line
 		Timer.start(30,winTimer);
 		if(count == 2)
 		{
@@ -107,18 +111,21 @@ class PlayState extends FlxState
 		}
 	}
 
+    // Spawn obstacles endlessly
 	function spawnObstacle():Void
 	{
 		var obstacles = obstacles.recycle(Obstacles.new);
 		obstacles.init();
 	}
 
+    // Spawn finish line
 	function spawnWin():Void
 	{
 		victory= new Win();
 		add(victory);
 	}
 
+    // Conditional for failure
 	private function obstacleHitsPlayer(Object1:FlxObject, Object2:FlxObject):Void
 	{
 		Object1.kill();
@@ -127,6 +134,7 @@ class PlayState extends FlxState
 
 	}
 
+    // Conditional for victory
 	private function winHitsPlayer(Object1:FlxObject, Object2:FlxObject):Void
 	{
 		Object1.kill();
