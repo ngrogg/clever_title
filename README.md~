@@ -8,8 +8,7 @@ The object of this game is to dodge the asteroids as they approach the player's 
 finish line will spawn, touching the finish line ends the game. Colliding with an obstacle causes the player to
 lose. There are three difficulty levels, each increases the speed and frequency of the obstacles spawning. 
 
-To play this game HaxeFlixel must be installed. There is no compiled code, so it should
-be cross-platform.
+To play this game HaxeFlixel must be installed.
 
 An in depth process of HaxeFlixel's installation can be found [here](https://haxeflixel.com/documentation/getting-started/)
 
